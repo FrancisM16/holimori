@@ -34,7 +34,7 @@ h1{
     opacity: .3;
     position: absolute;
     bottom: 0;
-    right: 5%;
+    right: 5vw;
     animation: burbujas 3s linear infinite ;
 }
 
@@ -46,7 +46,7 @@ h1{
     opacity: .3;
     position: absolute;
     bottom: 0;
-    left: 1%;
+    left: 2vw;
     animation: burbujas2 3s linear infinite ;
 }
 
@@ -459,6 +459,10 @@ footer .piePagina{
     #parrafoSection {
         padding-left: 70px;
         padding-bottom: 50px;
+    }
+
+    .burbuja{
+        left: 130vw;
     }
 
 }
