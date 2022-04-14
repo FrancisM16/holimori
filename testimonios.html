@@ -8,86 +8,117 @@
     <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <div class="gridContainer4">
-        <!-- MENÚ -->
-        <header id="head4">
-            <div class="menu espaciado-iz espaciado-de">
-                <div id="menu__logotipo"> 
-                    <a href="index.html"><img class="menu__logo" src="image/logo.png" alt="Holimori"></a>
+    <!-- MENÚ -->
+    <nav class="navbar fixed-top navbar-expand-lg bg-black">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="image/logo.png" alt="Holimori" width="40" height="40" class="rounded-circle">
+            </a>
+            <button class="navbar-toggler custom-toggler"type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="index.html" id="desactivo">Inicio</a>
+                    <a class="nav-link" href="servicios.html" id="desactivo">Servicios</a>
+                    <a class="nav-link" href="nosotros.html" id="desactivo">Nosotros</a>
+                    <a class="nav-link" href="#" id="activo">Testimonios</a>
+                    <a class="nav-link" href="contacto.html" id="desactivo">Contacto</a>
                 </div>
-                <nav class="menu__categories">
-                    <ul>
-                        <li> <a href="index.html">Inicio</a></li>
-                        <li> <a href="servicios.html">Servicios</a></li>
-                        <li> <a href="nosotros.html">Nosotros</a></li>
-                        <li> <a class="menu__categories__active" href="#">Testimonios</a></li>
-                        <li> <a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>  
-        </header>
+            </div>
+        </div>
+    </nav>
 
+    <!-- INFORMACIÓN DEL SITIO -->
+    <main>
         <!-- Testimonios-->
-        <h2 id="titulo-cat" class="color">Testimonios</h2>
-        <div id="tes__image1" class="color">
-            <img class="tes_image" src="image/per1.jpg" alt="nosotros">
-        </div>
-        <div id="tes__description1" class="espaciado-de color">
-            <h3>Lorena Ayala</h3>
-            <p>Quería agradeceros por toda la paciencia y la ayuda.. sois un equipazo!!! Siempre presentes,
-                muy bien organizados, sois un apoyo fuerte para nosotros y os adaptáis de la mejor manera
-                que podáis a nuestros clientes, sobre todo cuando cambian cosas a última hora!</p>
-        </div>
-
-        <div id="tes__image2" class="color">
-            <img class="tes_image" src="image/per2.jpg" alt="nosotros">
-        </div>
-        <div id="tes__description2" class="espaciado-iz color">
-            <h3>Marcos Villegas</h3>
-            <p>Ha sido un placer para nosotros contar con vuestro equipo durante el evento. Habéis
-                conseguido crear una actividad de teambuiding realmente innovadora y adaptada a nuestra
-                ciudad, dándole a nuestros clientes algo realmente único</p>
-        </div>
-
-        <div id="tes__image3" class="color">
-            <img class="tes_image" src="image/per3.jpg" alt="nosotros">
-        </div>
-        <div id="tes__description3" class="espaciado-de color">
-            <h3>Lucía Aguirre</h3>
-            <p>Agradeceros en nombre de todos la organización de la fiesta, por los mensajes que nos llegan
-                ha sido todo un éxito. Agradecer a todo el equipo su adaptación y paciencia. </p>
-        </div>
-
-        <div id="tes__image4" class="color">
-            <img class="tes_image" src="image/per4.jpg" alt="nosotros">
-        </div>
-        <div id="tes__description4" class="espaciado-iz color">
-            <h3>Bruno López</h3>
-            <p>Los clientes han quedado encantados, les gustó mucho la actividad y disfrutaron un montón, ha
-                sido todo un éxito. Os agradezco mucho todo vuestro esfuerzo y me gustaría que pudieses
-                trasladar mis felicitaciones a todo el equipo implicado en el evento.</p>
+        <div class="container-fluid color">
+            <div class="container">
+                <div class="col-md-12 mt-5 pt-5 mb-3">
+                    <h2>Testimonios</h2> 
+                </div>
+                <div class="row">
+                    <div class="col-md-4 pb-4 d-flex justify-content-center">
+                        <img class="tes__image rounded-circle" src="image/per1.jpg" alt="nosotros">
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center pb-4 pt-2">
+                        <div class="texto">
+                            <h3>Lorena Ayala</h3>
+                            <p>Quería agradeceros por toda la paciencia y la ayuda.. sois un equipazo!!! Siempre presentes,
+                                muy bien organizados, sois un apoyo fuerte para nosotros.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex flex-md-row-reverse">
+                    <div class="col-md-4 pb-4 d-flex justify-content-center">
+                        <img class="tes__image rounded-circle" src="image/per2.jpg" alt="nosotros">
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center pb-4 pt-2">
+                        <div class="texto">
+                            <h3>Marcos Villegas</h3>
+                            <p>Ha sido un placer para nosotros contar con vuestro equipo durante el evento. Habéis
+                                conseguido crear una actividad de teambuiding realmente innovadora.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 pb-4 d-flex justify-content-center">
+                        <img class="tes__image rounded-circle" src="image/per3.jpg" alt="nosotros">
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center pb-4 pt-2">
+                        <div class="texto">
+                            <h3>Lucía Aguirre</h3>
+                            <p>Agradeceros en nombre de todos la organización de la fiesta, por los mensajes que nos llegan
+                                ha sido todo un éxito. Agradecer a todo el equipo su adaptación y paciencia. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex flex-md-row-reverse">
+                    <div class="col-md-4 pb-4 d-flex justify-content-center">
+                        <img class="tes__image rounded-circle" src="image/per4.jpg" alt="nosotros">
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center pb-4 pt-2">
+                        <div class="texto">
+                            <h3>Bruno López</h3>
+                            <p>Los clientes han quedado encantados, les gustó mucho la actividad y disfrutaron un montón, ha
+                                sido todo un éxito. Os agradezco mucho todo vuestro esfuerzo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- PIE DE PÁGINA -->
-        <footer id="foot4">
-            <div class="piePagina espaciado-iz espaciado-de">
-                <img class="piePagina__logo" src="image/logo.png" alt="Holimori">
-                <div class="piePagina__copy">
-                    <p>Copyright 2022 | Perú</p>
-                </div>
-                <div class="piePagina__social">
-                    <a href="https://www.facebook.com/eventosholimori/ " target="_blank"><img src="image/facebook.png" alt="facebook"></a>
-                    <a href="https://www.instagram.com/eventosholimori/ " target="_blank"><img src="image/instagram.png" alt="instagram"></a>
-                    <a href="https://www.youtube.com/channel/UCFEVqYhOBw_8c_6Nf-MS50g" target="_blank"><img src="image/youtube.png" alt="youtube"></a>
+        <footer class="container-fluid bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="image/logo.png" alt="Holimori" width="40" height="40" class="rounded-circle">
+                        </a>
+                    </div>
+                    <div class="col-md-4 pt-3 d-flex justify-content-center">
+                        <p class="text-white">Copyright 2022 | Perú</p>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-end">
+                        <a class="espaciado" href="https://www.facebook.com/eventosholimori/ " target="_blank"><img src="image/facebook.png" alt="facebook" class="icono"></a>
+                        <a class="espaciado" href="https://www.instagram.com/eventosholimori/ " target="_blank"><img src="image/instagram.png" alt="instagram" class="icono"></a>
+                        <a class="espaciado" href="https://www.youtube.com/channel/UCFEVqYhOBw_8c_6Nf-MS50g" target="_blank"><img src="image/youtube.png" alt="youtube" class="icono"></a>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </div>
+        </footer>   
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
 </html>

@@ -8,100 +8,136 @@
     <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <div class="gridContainer">
-        <!-- MENÚ -->
-        <header id="head1">
-            <div class="menu espaciado-iz espaciado-de">
-                <div id="menu__logotipo"> 
-                    <a href="index.html"><img class="menu__logo" src="image/logo.png" alt="Holimori"></a>
+    <!-- MENÚ -->
+    <nav class="navbar fixed-top navbar-expand-lg bg-black">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="image/logo.png" alt="Holimori" width="40" height="40" class="rounded-circle">
+            </a>
+            <button class="navbar-toggler custom-toggler"type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#" id="activo">Inicio</a>
+                    <a class="nav-link" href="servicios.html" id="desactivo">Servicios</a>
+                    <a class="nav-link" href="nosotros.html" id="desactivo">Nosotros</a>
+                    <a class="nav-link" href="testimonios.html" id="desactivo">Testimonios</a>
+                    <a class="nav-link" href="contacto.html" id="desactivo">Contacto</a>
                 </div>
-                <nav class="menu__categories">
-                    <ul>
-                        <li> <a class="menu__categories__active" href="#">Inicio</a></li>
-                        <li> <a href="servicios.html">Servicios</a></li>
-                        <li> <a href="nosotros.html">Nosotros</a></li>
-                        <li> <a href="testimonios.html">Testimonios</a></li>
-                        <li> <a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>  
-        </header>
-
-        <!-- HERO-->
-        <div id="hero__description" class="espaciado-iz color-degradado1">
-            <h1 class="animacion">¡Encuentra aquí tu evento ideal!</h1>
-            <h3 class="animacion">Nos preocupamos de que tu evento sea todo un éxito y a la vez un grato recuerdo en toda tu vida. No
-                dudes en contactarnos para cotizarte el mejor plan para este evento soñado</h3>
-            <button id="btn" class="animacion"
-                onclick="location.href='contacto.html'">Contactar</button>
-        </div>
-        <div id="hero__image" class="espaciado-de color-degradado2">
-            <img class="animacion" src="image/portada.png" alt="portada">
-        </div>
-        <div class="burbuja">
-        </div>
-        <div class="burbuja2">
-        </div>
-        <!-- Home services-->
-        <h2 id="titulo-home">Nuestras categorías</h2>
-        <div id="card-1">
-            <div class="card">
-                <h3 class="card__title">Eventos corporativos</h3>
-                <img class="card__image" src="image/img1.png" alt="portada">
-                <p>Creamos un ambiente cálido en donde todos los miembros de la empresa puedan divertirse y sentirse
-                    agustos en el evento.</p>
             </div>
         </div>
-        <div id="card-2">
-            <div class="card">
-                <h3 class="card__title">Graduaciones</h3>
-                <img class="card__image" src="image/img2.png" alt="portada">
-                <p>Aquí encontrarás todo lo necesario para que tu fiesta de promoción sea increíble ofreciéndote
-                    desde togas hasta catering.</p>
-            </div>       
+    </nav>
+
+    <main>
+        
+        <!-- Hero-->
+        <div class="container-fluid" id="containerHero">
+            <div class="container animacion">
+                <div class="row mt-5 pt-4">
+                    <div class="col-md-8 d-flex align-items-center mt-3">
+                        <div>
+                            <h1>¡Encuentra aquí tu evento ideal!</h1>
+                            <h3>Nos preocupamos de que tu evento sea todo un éxito y a la vez un grato recuerdo en toda tu vida. No
+                                dudes en contactarnos para cotizarte el mejor plan para este evento soñado</h3>
+                            <button id="boton"
+                                onclick="location.href='contacto.html'">Contactar</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <img src="image/portada.png" alt="portada" id="hero__image">
+                    </div>
+                    <div class="burbuja"></div>
+                    <div class="burbuja2"></div>
+                </div>
+            </div>
         </div>
-        <div id="card-3">
-            <div class="card">
-                <h3 class="card__title">Eventos sociales</h3>
-                <img class="card__image" src="image/img3.png" alt="portada">
-                <p>Todo lo que necesitas para tener una boda extraordinaria o un 15 años memorable lo puedes
-                    encontrar aquí con nosotros.</p>
-            </div>  
+
+        <!-- Home services-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pt-4 pb-4">
+                    <h2>Nuestras categorías</h2> 
+                </div>
+                <div class="col-md-4 ">
+                    <div class="shadow-sm p-3 mb-5 d-flex align-items-center card color">
+                        <h3 class="mt-2">Eventos corporativos</h3>
+                        <img class="card__image rounded-circle mt-4 mb-4" src="image/img1.png" alt="portada">
+                        <p class="card__texto mb-2">Creamos un ambiente cálido en donde todos los miembros de la empresa puedan divertirse y sentirse
+                            agustos en el evento.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="shadow-sm p-3 mb-5 d-flex align-items-center card color">
+                        <h3 class="mt-2">Graduaciones</h3>
+                        <img class="card__image rounded-circle mt-4 mb-4" src="image/img2.png" alt="portada">
+                        <p class="card__texto mb-2">Aquí encontrarás todo lo necesario para que tu fiesta de promoción sea increíble ofreciéndote
+                            desde togas hasta catering.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="shadow-sm p-3 mb-5 d-flex align-items-center card color">
+                        <h3 class="mt-2">Eventos sociales</h3>
+                        <img class="card__image rounded-circle mt-4 mb-4" src="image/img3.png" alt="portada">
+                        <p class="card__texto mb-2">Todo lo que necesitas para tener una boda extraordinaria o un 15 años memorable lo puedes
+                            encontrar aquí con nosotros.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Home video-->
-        <h2 id="titulo-video" class="color">Contacto</h2>
-        <div id="videoSection" class="espaciado-iz color">
-            <iframe class="videoSection__video" 
-            src="https://www.youtube.com/embed/aoyvRmMExrs" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-        <div id="parrafoSection" class="espaciado-de color">
-            <p class="videoSection__par">En HoliMori creemos que los grandes eventos provienen de sueños
-            únicos. ¡Nunca dejes de creer que ese evento que tanto anhelas pueda ser realidad!</p>
+        <div class="container-fluid color">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 p-4">
+                        <h2>¡Conócenos!</h2>
+                    </div>
+                    <div class="col-md-6 pb-4">
+                        <iframe class="videoSection__video" 
+                        src="https://www.youtube.com/embed/aoyvRmMExrs" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    </div>
+                    <div class="col-md-6 pb-4 d-flex align-items-center text-center">
+                        <p>En HoliMori creemos que los grandes eventos provienen de sueños
+                            únicos. ¡Nunca dejes de creer que ese evento que tanto anhelas pueda ser realidad!</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- PIE DE PÁGINA -->
-        <footer>
-            <div class="piePagina espaciado-iz espaciado-de">
-                <img class="piePagina__logo" src="image/logo.png" alt="Holimori">
-                <div class="piePagina__copy">
-                    <p>Copyright 2022 | Perú</p>
-                </div>
-                <div class="piePagina__social">
-                    <a href="https://www.facebook.com/eventosholimori/ " target="_blank"><img src="image/facebook.png" alt="facebook"></a>
-                    <a href="https://www.instagram.com/eventosholimori/ " target="_blank"><img src="image/instagram.png" alt="instagram"></a>
-                    <a href="https://www.youtube.com/channel/UCFEVqYhOBw_8c_6Nf-MS50g" target="_blank"><img src="image/youtube.png" alt="youtube"></a>
+        <footer class="container-fluid bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="image/logo.png" alt="Holimori" width="40" height="40" class="rounded-circle">
+                        </a>
+                    </div>
+                    <div class="col-md-4 pt-3 d-flex justify-content-center">
+                        <p class="text-white">Copyright 2022 | Perú</p>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-end">
+                        <a class="espaciado" href="https://www.facebook.com/eventosholimori/ " target="_blank"><img src="image/facebook.png" alt="facebook" class="icono"></a>
+                        <a class="espaciado" href="https://www.instagram.com/eventosholimori/ " target="_blank"><img src="image/instagram.png" alt="instagram" class="icono"></a>
+                        <a class="espaciado" href="https://www.youtube.com/channel/UCFEVqYhOBw_8c_6Nf-MS50g" target="_blank"><img src="image/youtube.png" alt="youtube" class="icono"></a>
+                    </div>
                 </div>
             </div>
         </footer>
-    </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 </html>
