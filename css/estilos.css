@@ -1,14 +1,83 @@
 * {
-    margin: 0;
-    padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-
 h1{
     font-weight: 700;
     color: rgb(221, 36, 113);
     text-transform: uppercase;
-    font-size: x-large;
+    font-size: 24px;
+}
+
+h2{
+    font-weight: 500;
+    color: rgb(221, 36, 113);
+    text-align: center;
+    font-size: 24px;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 20px;
+    line-height : 30px
+}
+
+.color{
+    background-color: rgb(255, 225, 89);
+}
+/* Menú */
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 225, 89)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+  
+.custom-toggler.navbar-toggler {
+    border-color: rgb(255, 225, 89);
+} 
+
+.navbar-nav{
+  text-align: right;
+}
+
+.navbar .navbar-nav .nav-link {
+    padding-left: 1em;
+}
+
+#desactivo{
+    color: white;
+}
+
+#activo, #desactivo:hover{
+    color: rgb(255, 225, 89);
+}
+
+/* Hero */
+
+#containerHero{
+    background-image: linear-gradient(to bottom, rgba(221, 36, 113, 0.320), rgb(255, 225, 89));
+    border-radius: 0px 0px 60px 60px;
+}
+
+#hero__image{
+    width: 98%;
+}
+
+#boton{
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 14px;
+    outline: none;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+  
+#boton:hover {
+    background-color: rgb(221, 36, 113);
+    border: 1px solid rgb(221, 36, 113);
+    width: 180px;
 }
 
 .animacion{
@@ -24,9 +93,9 @@ h1{
     100% {
       opacity: 1;
     }
- }
+}
 
- .burbuja{
+.burbuja{
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -34,7 +103,7 @@ h1{
     opacity: .3;
     position: absolute;
     bottom: 0;
-    right: 5vw;
+    right: 6vw;
     animation: burbujas 3s linear infinite ;
 }
 
@@ -57,7 +126,7 @@ h1{
         opacity: 0;
     }
     30%{
-        transform: translateX(30px);
+        transform: translateX(20px);
     }
     50%{
         opacity: .4;
@@ -74,7 +143,7 @@ h1{
         opacity: 0;
     }
     30%{
-        transform: translateX(30px);
+        transform: translateX(20px);
     }
     50%{
         opacity: .4;
@@ -84,849 +153,73 @@ h1{
         opacity: 0;
     }
 }
- 
-h2{
-    font-weight: 500;
-    color: rgb(221, 36, 113);
-    text-align: center;
-}
 
-h3{
-    font-weight: 500;
-}
+/* Home */
 
-#btn{
-    width: 150px;
-    height: 40px;
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 14px;
-    outline: none;
-    margin-top: 10px;
-    color: white;
-    cursor: pointer;
-    transition: all 0.8s;
-  }
-  
-#btn:hover {
-    background-color: rgb(221, 36, 113);
-    border: 1px solid rgb(221, 36, 113);
-    width: 180px;
-}
-
-#btn2{
-    width: 150px;
-    height: 40px;
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 14px;
-    outline: none;
-    margin-top: 10px;
-    color: white;
-    cursor: pointer;
-    transition: all 0.8s;
-  }
-  
-#btn2:hover {
-    background-color: rgb(221, 36, 113);
-    border: 1px solid rgb(221, 36, 113);
-    width: 340px;
-}
-
-.espaciado-iz {
-    padding-left: 70px;
-}
-
-.espaciado-de {
-    padding-right: 70px;
-}
-
-.color{
-    background-color: rgb(255, 225, 89);
-    border: 1px solid rgb(255, 225, 89);
-}
-
-/*<!-- INDEX DESKTOP & MOBILE -->*/
-
-/* Menú */
-
-#head1{
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    position: fixed;
-    display: grid;
-    grid-area: nav;
-}
-
-.menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-}
-
-.menu__logo{
-    width: 40px;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.menu__categories ul{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-}
-
-.menu__categories ul li {
-    margin-right: 20px;
-}
-
-.menu__categories ul li a {
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-}
-
-.menu__categories li a.menu__categories__active,
-.menu__categories li a:hover{
-   color: rgb(255, 225, 89);
-}
-
-/* Hero */
-#hero__description {
-    display: grid;
-    grid-area: hero_des;
-    align-content: center;
-    line-height : 40px;
-    border-radius: 0px 0px 0px 60px;
-}
-
-#hero__image {
-    display: grid;
-    justify-content: flex-end;
-    grid-area: hero_img;
-    border-radius: 0px 0px 60px 0px;
-}
-
-#hero__image img{
-    padding-top: 60px;
-    height: 600px;
-} 
-
-#titulo-home {
-    display: grid;
-    grid-area: t-home;
-    justify-items: center;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Servicios */
-#card-1 {
-    display: grid;
-    grid-area: card1;
-    justify-content: flex-end;
-}
-
-#card-2 {
-    display: grid;
-    grid-area: card2;
-    justify-content: center;
-}
-
-#card-3 {
-    display: grid;
-    grid-area: card3;
-    justify-content: flex-start;
-}
-
+/* Home Services */
 .card{
-    margin-bottom: 5%;
-    width: 330px;
     border-radius: 10px;
-    text-align: center;
-    padding: 15px;
-    background-color: rgb(255, 225, 89);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-}
-  
-.card__title{
-    padding: 10px;
+    border-color: rgb(255, 225, 89);
 }
 
 .card__image{
-    padding: 15px;
-    border-radius: 100%;
-    width:80%;
+    width: 75%;
+}
+
+.card__texto{
+    text-align:center;
 }
 
 /* Home video */
-#titulo-video {
-    display: grid;
-    grid-area: t-video;
-    justify-items: center;
-    align-items: center;
-    padding: 20px;
-}
-
-#videoSection {
-    display: grid;
-    grid-area: v_video;
-    align-content: center;
-    justify-items: center;
-    padding-top: 20px;
-    padding-bottom: 30px;
-}
-
-#parrafoSection {
-    display: grid;
-    align-content: center;
-    grid-area: p_video;
-}
-
 .videoSection__video{
-    width: 80%;
-    height: 315px;
-}
-
-/* Pie de página */
-footer{
-    background-color: rgb(0, 0, 0);
-    display: grid;
-    grid-area: foo;
-    height: 60px;
-}
-  
-footer .piePagina{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-}
-  
-.piePagina__logo{
-    width: 40px;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-}
-  
-.piePagina__copy p{
-    color: white;
-}
-  
-.piePagina__social{
-    list-style: none;
-}
-  
-.piePagina__social img{
-    width: 20px;
-}
-
-/* Diseño Desktop Index */
-@media screen and (min-width:1201px) {
-    .gridContainer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-        "nav nav nav nav nav nav"
-        "hero_des hero_des hero_des hero_des hero_img hero_img"
-        "t-home t-home t-home t-home t-home t-home"
-        "card1 card1 card2 card2 card3 card3"
-        "t-video t-video t-video t-video t-video t-video"
-        "v_video v_video v_video p_video p_video p_video"
-        "foo foo foo foo foo foo";
-    }
-
-    .color-degradado1{
-        background-image: linear-gradient(to bottom, rgba(221, 36, 113, 0.320), rgb(255, 225, 89));
-    }
-    
-    .color-degradado2{
-        background-image: linear-gradient(to bottom, rgba(221, 36, 113, 0.320), rgb(255, 225, 89));
-    }
-
-}
-
-/* Diseño Mobile Index */
-@media screen and (max-width:1200px) {
-    .gridContainer {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "nav"
-        "hero_des"
-        "hero_img"
-        "t-home"
-        "card1"
-        "card2"
-        "card3"
-        "t-video"
-        "v_video"
-        "p_video"
-        "foo";
-    }
-
-    .menu{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 350px;
-    }
-
-    footer .piePagina{
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
-    .piePagina__logo{
-        width: 80px;
-    }
-
-    .piePagina__copy p{
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-
-    .menu__logo{
-        width: 80px;
-    }
-
-    .menu__categories ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 15px;
-        font-size: x-large;
-    }
-
-    h1{
-        font-size: xx-large;
-    }
-
-    #hero__description {
-        padding-top: 430px;
-        padding-right: 70px;
-    }
-
-    #hero__image {
-        display: grid;
-        justify-content: center;
-        border-radius: 0px 0px 60px 60px;
-    }
-
-    #hero__description {
-        border-radius: 0px 0px 0px 0px;
-    }
-
-    .color-degradado1{
-        background-color: rgba(221, 36, 113, 0.320) ;
-    }
-    
-    .color-degradado2{
-        background-image: linear-gradient(to bottom, rgba(221, 36, 113, 0.320), rgb(255, 225, 89));
-    }
-
-    #card-1 {
-        display: grid;
-        grid-area: card1;
-        justify-content: center;
-    }
-
-    #card-3 {
-        display: grid;
-        grid-area: card3;
-        justify-content: center;
-    }
-
-    #videoSection {
-        padding-right: 70px; 
-    }
-
-    .videoSection__video{
-        width: 600px;
-        height: 315px;
-    }
-
-    #parrafoSection {
-        padding-left: 70px;
-        padding-bottom: 50px;
-    }
-
-    .burbuja{
-        left: 130vw;
-    }
-
-}
-
-
-/*<!-- SERVICIOS DESKTOP & MOBILE -->*/
-
-/* Menú */
-#head2{
-    background-color: rgb(0, 0, 0);
     width: 100%;
-    position: fixed;
-    display: grid;
-    grid-area: nav2;
+    height: 300px;
 }
 
 /* Servicios */
-#titulo-cat {
-    display: grid;
-    grid-area: t-cat;
-    justify-items: center;
-    align-items: center;
-    padding: 20px;
-}
-
-#card-1a {
-    display: grid;
-    grid-area: card1a;
-    justify-content: center;
-}
-
-#card-2a {
-    display: grid;
-    grid-area: card2a;
-    justify-content: center;
-}
-
-#card-3a {
-    display: grid;
-    grid-area: card3a;
-    justify-content: center;
-}
-
-#card-4a {
-    display: grid;
-    grid-area: card4a;
-    justify-content: center;
-}
-
-#card-5a {
-    display: grid;
-    grid-area: card5a;
-    justify-content: center;
-}
-
-#card-6a {
-    display: grid;
-    grid-area: card6a;
-    justify-content: center;
-}
-
-.card2{
-    width: 330px;
-    border-radius: 10px;
-    text-align: center;
-    padding: 15px;
-}
-  
-.card2__title{
-    padding: 10px;
-    font-weight: bold;
+.card__titulo2{
     color: rgb(221, 36, 113);
+    font-weight: bold;
 }
-
-.card2__image{
-    border-radius: 15%;
-    width: 100%;
-}
-
-/* Pie de página */
-#foot2{
-    background-color: rgb(0, 0, 0);
-    display: grid;
-    grid-area: foo2;
-    height: 60px;
-}
-
-/* Diseño Desktop Servicios */
-@media screen and (min-width:1201px) {
-    .gridContainer2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-        "nav2 nav2"
-        "t-cat t-cat"
-        "card1a card2a"
-        "card3a card4a"
-        "card5a card6a"
-        "foo2 foo2";
-    }
-
-    #titulo-cat {
-        padding-top: 100px;
-    }
-    
-}
-
-/* Diseño Mobile Servicios */
-@media screen and (max-width:1200px) {
-    .gridContainer2 {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "nav2"
-        "t-cat"
-        "card1a"
-        "card2a"
-        "card3a"
-        "card4a"
-        "card5a"
-        "card6a"
-        "foo2";
-    }
-
-    #titulo-cat {
-        padding-top: 400px;
-        font-size: xx-large;
-    }
-
-    .card2__title{
-        font-size: x-large;
-    }
-    
-}
-
-/*<!-- Nosotros DESKTOP & MOBILE -->*/
-
-/* Menú */
-#head3{
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    position: fixed;
-    display: grid;
-    grid-area: nav3;
+.card__image2{
+    width: 70%;
+    border-radius: 30px;
 }
 
 /* Nosotros */
-#nos__image {
-    display: grid;
-    justify-items: center;
-    grid-area: nos-img;
-    padding-bottom: 50px;
+.nos__image{
+    width: 80%;
 }
 
-#nos__description {
-    display: grid;
-    grid-area: nos-des;
-    align-content: center;
-    line-height : 30px;
-}
-
-#nos__image img{
-    border-radius: 100%;
-    width: 50%;
+.nos__par{
+    text-align: left;
 }
 
 /* Principios */
-#titulo-pri {
-    display: grid;
-    grid-area: t-pri;
-    justify-items: center;
-    align-items: center;
-    padding: 50px;
-}
-
-#card-1b {
-    display: grid;
-    grid-area: card1b;
-    justify-content: flex-end;
-    padding-bottom: 30px;
-}
-
-#card-2b {
-    display: grid;
-    grid-area: card2b;
-    justify-content: center;
-    padding-bottom: 30px;
-}
-
-#card-3b {
-    display: grid;
-    grid-area: card3b;
-    justify-content: flex-start;
-    padding-bottom: 30px;
-}
-
-.card3{
-    width: 330px;
-    border-radius: 10px;
-    text-align: center;
-    padding: 15px;
-}
-  
-.card3__title{
-    padding: 10px;
-    font-weight: bold;
-    color: rgb(221, 36, 113);
-}
-
-.card3__image{
-    border-radius: 15%;
+.pri__image{
     width: 40%;
 }
 
-/* Pie de página */
-#foot3{
-    background-color: rgb(0, 0, 0);
-    display: grid;
-    grid-area: foo3;
-    height: 60px;
-}
-
-/* Diseño Desktop Nosotros */
-@media screen and (min-width:1201px) {
-    .gridContainer3 {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-        "nav3 nav3 nav3 nav3 nav3 nav3"
-        "t-cat t-cat t-cat t-cat t-cat t-cat"
-        "nos-img nos-img nos-img nos-des nos-des nos-des"
-        "t-pri t-pri t-pri t-pri t-pri t-pri"
-        "card1b card1b card2b card2b card3b card3b"
-        "foo3 foo3 foo3 foo3 foo3 foo3";
-    }
-    
-}
-
-/* Diseño Mobile Nosotros */
-@media screen and (max-width:1200px) {
-    .gridContainer3 {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "nav3"
-        "t-cat"
-        "nos-img"
-        "nos-des"
-        "t-pri"
-        "card1b"
-        "card2b"
-        "card3b"
-        "foo3";
-    }
-
-    #titulo-cat {
-        padding-top: 400px;
-        font-size: xx-large;
-    }
-
-    #nos__description {
-        display: grid;
-        text-align: center;
-        padding-left: 70px;
-        padding-bottom: 40px;
-    }
-
-    #titulo-pri {
-        font-size: xx-large;
-    }
-
-    #card-1b {
-        display: grid;
-        justify-content: center;
-    }
-    
-    #card-3b {
-        display: grid;
-        justify-content: center;
-    }   
-}
-
-/*<!-- Testimonios DESKTOP & MOBILE -->*/
-
-/* Menú */
-#head4{
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    position: fixed;
-    display: grid;
-    grid-area: nav4;
-}
-
 /* Testimonios */
-#tes__image1 {
-    display: grid;
-    justify-items: center;
-    grid-area: t-img1;
-    padding-bottom: 50px;
-}
-
-#tes__description1 {
-    display: grid;
-    grid-area: t-des1;
-    align-content: center;
-    line-height : 30px;
-}
-
-#tes__image2 {
-    display: grid;
-    justify-items: center;
-    grid-area: t-img2;
-    padding-bottom: 50px;
-}
-
-#tes__description2 {
-    display: grid;
-    grid-area: t-des2;
-    align-content: center;
-    line-height : 30px;
-}
-
-#tes__image3 {
-    display: grid;
-    justify-items: center;
-    grid-area: t-img3;
-    padding-bottom: 50px;
-}
-
-#tes__description3 {
-    display: grid;
-    grid-area: t-des3;
-    align-content: center;
-    line-height : 30px;
-}
-
-#tes__image4 {
-    display: grid;
-    justify-items: center;
-    grid-area: t-img4;
-    padding-bottom: 50px;
-}
-
-#tes__description4 {
-    display: grid;
-    grid-area: t-des4;
-    align-content: center;
-    line-height : 30px;
-}
-
-.tes_image{
-    border-radius: 100%;
-    width: 30%;
-}
-
-/* Pie de página */
-#foot4{
-    background-color: rgb(0, 0, 0);
-    display: grid;
-    grid-area: foo4;
-    height: 60px;
-}
-
-/* Diseño Desktop Testimonios */
-@media screen and (min-width:1201px) {
-    .gridContainer4 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-        "nav4 nav4"
-        "t-cat t-cat"
-        "t-img1 t-des1"
-        "t-des2 t-img2"
-        "t-img3 t-des3"
-        "t-des4 t-img4"
-        "foo4 foo4";
-    }
-    
-}
-
-/* Diseño Mobile Nosotros */
-@media screen and (max-width:1200px) {
-    .gridContainer4 {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "nav4"
-        "t-cat"
-        "t-img1"
-        "t-des1"
-        "t-img2"
-        "t-des2"
-        "t-img3"
-        "t-des3"
-        "t-img4"
-        "t-des4"
-        "foo4";
-    }
-
-    #titulo-cat {
-        padding-top: 400px;
-        font-size: xx-large;
-    }
-
-    #tes__description1, #tes__description3 {
-        display: grid;
-        text-align: center;
-        padding-left: 70px;
-        padding-bottom: 40px;
-    }
-
-    #tes__description2, #tes__description4 {
-        display: grid;
-        text-align: center;
-        padding-right: 70px;
-        padding-bottom: 40px;
-    }
-
-}
-
-/*<!-- Contacto DESKTOP & MOBILE -->*/
-
-/* Menú */
-#head5{
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    position: fixed;
-    display: grid;
-    grid-area: nav5;
+.tes__image{
+    width: 65%;
 }
 
 /* Contacto */
-#contacto__parrafo {
-    display: grid;
-    grid-area: c-par;
-    justify-items: center;
-    text-align: center;
-    line-height : 30px;
-    padding-bottom: 60px;
+.con__image{
+    width: 80%;
 }
 
-#contacto__image {
-    display: grid;
-    justify-items: center;
-    grid-area: c-img;
-    padding-bottom: 100px;
-    padding-top: 50px;
-}
-
-#contacto__image img{
-    width: 600px;
-    border-radius: 100%;
-}
-
-#contacto__form{
+.contacto__form{
     display: grid;
     grid-area: c-form;
     text-align: center;
     align-content: center;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
-#contacto__form input{
+.contacto__form input{
     width: 300px;
     height: 40px;
     border: none;
@@ -934,15 +227,14 @@ footer .piePagina{
     outline: none;
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 20px;
     transition: all 0.8s;
 }
 
-#contacto__form input:focus{
+.contacto__form input:focus{
     width: 340px;
 }
 
-#contacto__form textarea{
+.contacto__form textarea{
     width: 300px;
     height: 100px;
     border: 1px solid white;
@@ -951,67 +243,28 @@ footer .piePagina{
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-    margin-bottom: 20px;
     transition: all 0.8s;
 }
 
-#contacto__form textarea:focus{
+.contacto__form textarea:focus{
     width: 340px;
 }
 
-/* Pie de página */
-#foot5{
-    background-color: rgb(0, 0, 0);
-    display: grid;
-    grid-area: foo5;
-    height: 60px;
+/* Pie de pagina */
+.espaciado{
+    padding-right: 0.5em;
 }
 
-/* Diseño Desktop Contacto */
-@media screen and (min-width:1201px) {
-    .gridContainer5 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-        "nav5 nav5"
-        "t-cat t-cat"
-        "c-par c-par"
-        "c-img c-form"
-        "foo5 foo5";
-    }
-    
+.icono{
+    width: 110%;
+    margin-bottom: 5px;
 }
 
-/* Diseño Mobile Contacto */
-@media screen and (max-width:1200px) {
-    .gridContainer5 {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "nav5"
-        "t-cat"
-        "c-par"
-        "c-img"
-        "c-form"
-        "foo5";
-    }
-
-    #titulo-cat {
-        padding-top: 400px;
-        font-size: xx-large;
-    }
-
-    #contacto__image{
-        padding-right: 70px;
-        padding-bottom: 20px;
-        padding-top: 20px;
-    }
-
-    #contacto__image img{
-        width: 400px;
+@media screen and (max-width:767px){
+    .texto{
+        text-align: center;
     }
 }
-
 
 
 
