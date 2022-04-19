@@ -35,19 +35,21 @@ h3{
 } 
 
 .navbar-nav{
-  text-align: right;
+    text-align: right;
 }
 
-.navbar .navbar-nav .nav-link {
-    padding-left: 1em;
+#navbar__categories li {
+    padding: 0.5em 0 0.5em 1em;
 }
 
-#desactivo{
+#navbar__categories li a {
     color: white;
+    text-decoration: none;
 }
 
-#activo, #desactivo:hover{
-    color: rgb(255, 225, 89);
+#navbar__categories li a.navbar__categories__active,
+#navbar__categories li a:hover{
+   color: rgb(255, 225, 89);
 }
 
 /* Hero */
@@ -103,24 +105,19 @@ h3{
     opacity: .3;
     position: absolute;
     bottom: 0;
+}
+
+.x1{
     right: 6vw;
-    animation: burbujas 3s linear infinite ;
+    animation: burbuja__bottom 3s linear infinite ;
 }
 
-.burbuja2{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #fff;
-    opacity: .3;
-    position: absolute;
-    bottom: 0;
+.x2{
     left: 2vw;
-    animation: burbujas2 3s linear infinite ;
+    animation: burbuja__top 3s linear infinite ;
 }
 
-
-@keyframes burbujas{
+@keyframes burbuja__bottom{
     0%{
         bottom: 0;
         opacity: 0;
@@ -137,7 +134,7 @@ h3{
     }
 }
 
-@keyframes burbujas2{
+@keyframes burbuja__top{
     0%{
         top: 0;
         opacity: 0;
@@ -146,7 +143,7 @@ h3{
         transform: translateX(20px);
     }
     50%{
-        opacity: .4;
+        opacity: .5;
     }
     100%{
         top: 100vh;
