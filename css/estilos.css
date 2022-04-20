@@ -24,6 +24,13 @@ h3{
 .color{
     background-color: rgb(255, 225, 89);
 }
+
+@media screen and (max-width:767px){
+    .texto{
+        text-align: center;
+    }
+}
+
 /* Menú */
 
 .custom-toggler .navbar-toggler-icon {
@@ -107,12 +114,12 @@ h3{
     bottom: 0;
 }
 
-.x1{
+.b1{
     right: 6vw;
     animation: burbuja__bottom 3s linear infinite ;
 }
 
-.x2{
+.b2{
     left: 2vw;
     animation: burbuja__top 3s linear infinite ;
 }
@@ -202,8 +209,8 @@ h3{
     width: 65%;
 }
 
-/* Contacto */
-.con__image{
+/* Formulario de contacto */
+.contacto__image{
     width: 80%;
 }
 
@@ -243,30 +250,22 @@ h3{
     transition: all 0.8s;
 }
 
-.me__image{
-    width: 20%;
-    filter: invert(100%);
-}
-
 .contacto__form textarea:focus{
     width: 340px;
 }
 
-/* Pie de pagina */
-.espaciado{
-    padding-right: 0.5em;
+/* Otros medios */
+.medio__image{
+    width: 20%;
+    filter: invert(100%);
 }
 
+/* Pie de pagina */
 .icono{
     width: 110%;
     margin-bottom: 5px;
 }
 
-@media screen and (max-width:767px){
-    .texto{
-        text-align: center;
-    }
-}
 
 
 
