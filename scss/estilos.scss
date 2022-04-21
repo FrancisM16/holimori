@@ -1,0 +1,264 @@
+@import "colores";
+@import "tipografia";
+
+h1{
+    font-weight: 700;
+    color: $color_secundario;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+h2{
+    font-weight: 500;
+    color: $color_secundario;
+    text-align: center;
+    font-size: 24px;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 20px;
+    line-height : 30px
+}
+
+.color{
+    background-color: $color_primario;
+}
+
+@media screen and (max-width:767px){
+    .texto{
+        text-align: center;
+    }
+}
+
+/* Menú */
+
+.custom-toggler{
+    .navbar-toggler-icon{
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 225, 89)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+}
+
+.navbar-toggler {
+    border-color: $color_primario;
+}
+
+.navbar-nav{
+    text-align: right;
+}
+
+#navbar__categories{
+    li{
+        padding: 0.5em 0 0.5em 1em;
+        a{
+            color: $color_blanco;
+            text-decoration: none;
+            &:hover{
+                color: $color_primario;
+            }
+        }
+        .navbar__categories__active{
+            color: $color_primario;
+        }
+    }
+}
+
+#containerHero{
+    background-image: linear-gradient(to bottom, $color_secundario_variante, $color_primario);
+    border-radius: 0px 0px 60px 60px;
+}
+
+#hero__image{
+    width: 98%;
+}
+
+#boton{
+    width: 150px;
+    height: 40px;
+    background-color: $color_negro;
+    border: 1px solid $color_negro;
+    border-radius: 14px;
+    outline: none;
+    margin-top: 10px;
+    color: $color_blanco;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover{
+        background-color: $color_secundario;
+        border: 1px solid $color_secundario;
+        width: 180px;
+    }
+}
+
+.animacion{
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: initial;
+}
+
+@keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.burbuja{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $color_blanco;
+    opacity: .3;
+    position: absolute;
+    bottom: 0;
+}
+
+.b1{
+    right: 6vw;
+    animation: burbuja__bottom 3s linear infinite ;
+}
+
+.b2{
+    left: 2vw;
+    animation: burbuja__top 3s linear infinite ;
+}
+
+@keyframes burbuja__bottom{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(20px);
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes burbuja__top{
+    0%{
+        top: 0;
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(20px);
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        top: 100vh;
+        opacity: 0;
+    }
+}
+
+/* Home */
+
+/* Home Services */
+.card{
+    border-radius: 10px;
+    border-color: $color_primario;
+}
+
+.card__image{
+    width: 75%;
+}
+
+.card__texto{
+    text-align:center;
+}
+
+/* Home video */
+.videoSection__video{
+    width: 100%;
+    height: 300px;
+}
+
+/* Servicios */
+.card__titulo2{
+    color: $color_secundario;
+    font-weight: bold;
+}
+.card__image2{
+    width: 70%;
+    border-radius: 30px;
+}
+
+/* Nosotros */
+.nos__image{
+    width: 80%;
+}
+
+.nos__par{
+    text-align: left;
+}
+
+/* Principios */
+.pri__image{
+    width: 40%;
+}
+
+/* Testimonios */
+.tes__image{
+    width: 65%;
+}
+
+/* Formulario de contacto */
+.contacto__image{
+    width: 80%;
+}
+
+.contacto__form{
+    display: grid;
+    grid-area: c-form;
+    text-align: center;
+    align-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    input{
+        width: 300px;
+        height: 40px;
+        border: none;
+        border-radius: 14px;
+        outline: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        transition: all 0.8s;
+        &:focus{
+            width: 340px;
+        }
+    }
+    textarea{
+        width: 300px;
+        height: 100px;
+        border: 1px solid $color_blanco;
+        border-radius: 14px;
+        outline: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        transition: all 0.8s;
+        &:focus{
+            width: 340px;
+        }
+    }
+}
+
+/* Otros medios */
+.medio__image{
+    width: 20%;
+    filter: invert(100%);
+}
+
+/* Pie de pagina */
+.icono{
+    width: 110%;
+    margin-bottom: 5px;
+}
