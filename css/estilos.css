@@ -16,8 +16,8 @@ h2 {
 
 h3 {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 30px; }
+  line-height: 30px;
+  font-size: 20px; }
 
 .color {
   background-color: #ffe159; }
@@ -51,7 +51,7 @@ h3 {
   border-radius: 0px 0px 60px 60px; }
 
 #hero__image {
-  width: 98%; }
+  width: 100%; }
 
 #boton {
   width: 150px;
@@ -80,20 +80,23 @@ h3 {
   100% {
     opacity: 1; } }
 
-.burbuja {
+.burbuja, .burbuja1, .burbuja2 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: white;
   opacity: .3;
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  right: none;
+  left: none;
+  animation: none; }
 
-.b1 {
+.burbuja1 {
   right: 6vw;
   animation: burbuja__bottom 3s linear infinite; }
 
-.b2 {
+.burbuja2 {
   left: 2vw;
   animation: burbuja__top 3s linear infinite; }
 
@@ -128,7 +131,7 @@ h3 {
   border-color: #ffe159; }
 
 .card__image {
-  width: 75%; }
+  width: 70%; }
 
 .card__texto {
   text-align: center; }
@@ -160,11 +163,20 @@ h3 {
 
 /* Testimonios */
 .tes__image {
-  width: 65%; }
+  width: 60%; }
 
 /* Formulario de contacto */
 .contacto__image {
   width: 80%; }
+
+.caja, .contacto__form input, .contacto__form textarea {
+  border-radius: 14px;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all 0.8s; }
+  .caja:focus, .contacto__form input:focus, .contacto__form textarea:focus {
+    width: 340px; }
 
 .contacto__form {
   display: grid;
@@ -174,28 +186,13 @@ h3 {
   padding-top: 20px;
   padding-bottom: 20px; }
   .contacto__form input {
-    width: 300px;
     height: 40px;
-    border: none;
-    border-radius: 14px;
-    outline: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    transition: all 0.8s; }
-    .contacto__form input:focus {
-      width: 340px; }
-  .contacto__form textarea {
     width: 300px;
+    border: none; }
+  .contacto__form textarea {
     height: 100px;
-    border: 1px solid white;
-    border-radius: 14px;
-    outline: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    transition: all 0.8s; }
-    .contacto__form textarea:focus {
-      width: 340px; }
+    width: 300px;
+    border: 1px solid white; }
 
 /* Otros medios */
 .medio__image {
@@ -204,5 +201,5 @@ h3 {
 
 /* Pie de pagina */
 .icono {
-  width: 110%;
+  width: 100%;
   margin-bottom: 5px; }

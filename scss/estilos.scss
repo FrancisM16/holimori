@@ -2,28 +2,30 @@
 @import "tipografia";
 
 h1{
-    font-weight: 700;
+    font-weight: map-get($estilos, font-weight-1);
     color: $color_secundario;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: map-get($estilos, font-size-1);
 }
 
 h2{
-    font-weight: 500;
+    font-weight: map-get($estilos, font-weight-2);
     color: $color_secundario;
     text-align: center;
-    font-size: 24px;
+    font-size: map-get($estilos, font-size-1);
 }
 
 h3{
-    font-weight: 500;
-    font-size: 20px;
-    line-height : 30px
+    font-weight: map-get($estilos, font-weight-2);
+    line-height : 30px;
+    font-size: map-get($estilos, font-size-2);
 }
 
 .color{
     background-color: $color_primario;
 }
+
+$ancho: 100%;
 
 @media screen and (max-width:767px){
     .texto{
@@ -69,7 +71,7 @@ h3{
 }
 
 #hero__image{
-    width: 98%;
+    width: $ancho;
 }
 
 #boton{
@@ -113,16 +115,21 @@ h3{
     opacity: .3;
     position: absolute;
     bottom: 0;
+    right: none;
+    left: none;
+    animation: none;
 }
 
-.b1{
+.burbuja1{
+    @extend .burbuja;
     right: 6vw;
-    animation: burbuja__bottom 3s linear infinite ;
+    animation: burbuja__bottom 3s linear infinite;
 }
 
-.b2{
+.burbuja2{
+    @extend .burbuja;
     left: 2vw;
-    animation: burbuja__top 3s linear infinite ;
+    animation: burbuja__top 3s linear infinite;
 }
 
 @keyframes burbuja__bottom{
@@ -168,7 +175,7 @@ h3{
 }
 
 .card__image{
-    width: 75%;
+    width: $ancho*0.7;
 }
 
 .card__texto{
@@ -177,7 +184,7 @@ h3{
 
 /* Home video */
 .videoSection__video{
-    width: 100%;
+    width: $ancho;
     height: 300px;
 }
 
@@ -187,13 +194,13 @@ h3{
     font-weight: bold;
 }
 .card__image2{
-    width: 70%;
+    width: $ancho*0.7;
     border-radius: 30px;
 }
 
 /* Nosotros */
 .nos__image{
-    width: 80%;
+    width: $ancho*0.8;
 }
 
 .nos__par{
@@ -202,18 +209,35 @@ h3{
 
 /* Principios */
 .pri__image{
-    width: 40%;
+    width: $ancho*0.4;
 }
 
 /* Testimonios */
 .tes__image{
-    width: 65%;
+    width: $ancho*0.6;
 }
 
 /* Formulario de contacto */
 .contacto__image{
-    width: 80%;
+    width: $ancho*0.8;
 }
+
+.caja{    
+    border-radius: 14px;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.8s;
+    &:focus{
+        width: 340px;
+    }
+}
+
+@mixin caja__sizes($height, $width, $border) {
+    height: $height;
+    width: $width;
+    border: $border;
+} 
 
 .contacto__form{
     display: grid;
@@ -223,42 +247,24 @@ h3{
     padding-top: 20px;
     padding-bottom: 20px;
     input{
-        width: 300px;
-        height: 40px;
-        border: none;
-        border-radius: 14px;
-        outline: none;
-        padding-left: 10px;
-        padding-right: 10px;
-        transition: all 0.8s;
-        &:focus{
-            width: 340px;
-        }
+        @extend .caja;
+        @include caja__sizes(40px, 300px, none);
+
     }
     textarea{
-        width: 300px;
-        height: 100px;
-        border: 1px solid $color_blanco;
-        border-radius: 14px;
-        outline: none;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
-        transition: all 0.8s;
-        &:focus{
-            width: 340px;
-        }
+        @extend .caja;
+        @include caja__sizes(100px, 300px, 1px solid $color_blanco);
     }
 }
 
 /* Otros medios */
 .medio__image{
-    width: 20%;
+    width: $ancho*0.2;
     filter: invert(100%);
 }
 
 /* Pie de pagina */
 .icono{
-    width: 110%;
+    width: $ancho;
     margin-bottom: 5px;
 }
