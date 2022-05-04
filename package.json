@@ -1,7 +1,7 @@
 {
-  "name": "idea-v4-mori",
+  "name": "eventos-holimori",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web de la productora peruana de eventos Holimori que se especializa en reuniones corporativas, sociales, entre otros.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
