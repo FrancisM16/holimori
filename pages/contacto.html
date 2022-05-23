@@ -54,17 +54,31 @@
                         <img class="contacto__image rounded-circle" src="../image/form.png" alt="Formulario">
                     </div>
                     <div class="col-md-6">
-                        <div class="contacto__form">
-                            <form action="gracias.html">
-                                <p><label>Nombre</label><br><input type="text" value="" placeholder="Ej. Ana Salazar"></p>
-                                <p><label for="">Email</label><br><input type="email" value=""
-                                        placeholder="Ej. anasalazar@gmail.com"></p>
-                                <p><label>Tipo de evento</label><br><input type="text" value="" placeholder="Ej. Matrimonio"></p>
-                                <p><label for="">Cotización</label><br><textarea
-                                        placeholder="Cuéntanos sobre tu evento y brindanos detalles"></textarea></p>
-                                <p><input id="boton" type="submit" value="Enviar"></p>
-                            </form>
-                        </div>
+                        <form action="gracias.html">
+                            <div class="pt-4 text-center">
+                                <h3>¿Cómo podemos ayudarte?</h3>
+                            </div>
+                            <div class="p-4">
+                                <div>
+                                    <label for="name" class="form-label">Nombre<span class="obligatorio">*</span></label>
+                                    <input type="text" name="name" class="form-control caja" placeholder="Ej. Ana Salazar" required>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="email" class="form-label">Email<span class="obligatorio">*</span></label>
+                                    <input type="text" name="email" class="form-control caja" placeholder="Ej. anasalazar@gmail.com" required>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="subject" class="form-label">Tipo de evento<span class="obligatorio">*</span></label>
+                                    <input type="text" name="subject" class="form-control caja" placeholder="Ej. Matrimonio" required>
+                                </div>
+                                <div class="mt-3 mb-3">
+                                    <label for="message" class="form-label">Cotización<span class="obligatorio">*</span></label>
+                                    <textarea name="message" cols="20" rows="6" class="form-control caja"
+                                        placeholder="Cuéntanos sobre tu evento y brindanos detalles" required></textarea>
+                                </div>
+                                <button id="boton" type="submit">Enviar</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -22,9 +22,37 @@ h3 {
 .color {
   background-color: #ffe159; }
 
+.color2 {
+  background-color: rgba(255, 255, 255, 0.288); }
+
+.redondeo {
+  border-radius: 20px; }
+
+.hero__image {
+  background-image: url("../image/bg1.jpg");
+  min-height: 60vh;
+  background-size: cover;
+  position: relative; }
+
+.hero__titulo {
+  color: #dd2471;
+  font-weight: 700; }
+
+.hero__description {
+  font-weight: 500;
+  text-align: center; }
+
+.hero__image__color {
+  position: absolute;
+  background-image: linear-gradient(rgba(196, 196, 196, 0.863), rgba(255, 121, 183, 0.562));
+  height: 100%;
+  width: 100%; }
+
 @media screen and (max-width: 767px) {
   .texto {
-    text-align: center; } }
+    text-align: center; }
+  .hero__image {
+    min-height: 40vh; } }
 
 /* Menú */
 .custom-toggler .navbar-toggler-icon {
@@ -47,7 +75,7 @@ h3 {
     color: #ffe159; }
 
 #containerHero {
-  background-image: linear-gradient(to bottom, rgba(221, 36, 113, 0.32), #ffe159);
+  background-image: linear-gradient(to bottom, #e694b6, #ffe159);
   border-radius: 0px 0px 60px 60px; }
 
 #hero__image {
@@ -125,16 +153,10 @@ h3 {
     opacity: 0; } }
 
 /* Home */
-/* Home Services */
-.card {
-  border-radius: 10px;
-  border-color: #ffe159; }
-
-.card__image {
-  width: 70%; }
-
-.card__texto {
-  text-align: center; }
+/* Home categorias */
+.image__redondeo {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px; }
 
 /* Home video */
 .videoSection__video {
@@ -147,8 +169,13 @@ h3 {
   font-weight: bold; }
 
 .card__image2 {
-  width: 70%;
-  border-radius: 30px; }
+  width: 50%;
+  border-radius: 100%; }
+
+.card__header {
+  margin-top: -35px;
+  height: 60px;
+  background-image: linear-gradient(40deg, #e694b6, #fdd009); }
 
 /* Nosotros */
 .nos__image {
@@ -162,37 +189,29 @@ h3 {
   width: 40%; }
 
 /* Testimonios */
-.tes__image {
-  width: 60%; }
+.card__background {
+  height: 120px;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-image: linear-gradient(40deg, #e694b6, #fdd009); }
+
+.card__profile {
+  width: 120px;
+  margin-top: -60px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 50%; }
 
 /* Formulario de contacto */
 .contacto__image {
   width: 80%; }
 
-.caja, .contacto__form input, .contacto__form textarea {
-  border-radius: 14px;
-  outline: none;
-  padding-left: 10px;
-  padding-right: 10px;
-  transition: all 0.8s; }
-  .caja:focus, .contacto__form input:focus, .contacto__form textarea:focus {
-    width: 340px; }
+.caja {
+  border-radius: 14px; }
 
-.contacto__form {
-  display: grid;
-  grid-area: c-form;
-  text-align: center;
-  align-content: center;
-  padding-top: 20px;
-  padding-bottom: 20px; }
-  .contacto__form input {
-    height: 40px;
-    width: 300px;
-    border: none; }
-  .contacto__form textarea {
-    height: 100px;
-    width: 300px;
-    border: 1px solid white; }
+.obligatorio {
+  color: #dd2471; }
 
 /* Otros medios */
 .medio__image {

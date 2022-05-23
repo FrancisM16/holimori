@@ -1,7 +1,7 @@
 {
   "name": "eventos-holimori",
   "version": "1.0.0",
-  "description": "Web de la productora peruana de eventos Holimori que se especializa en reuniones corporativas, sociales, entre otros.",
+  "description": "Web de la productora peruana de eventos Holimori que se especializa en reuniones laborales, sociales, entre otros.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

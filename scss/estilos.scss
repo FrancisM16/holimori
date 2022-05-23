@@ -25,11 +25,46 @@ h3{
     background-color: $color_primario;
 }
 
+.color2{
+    background-color: $color_primario_variante2;
+}
+
+.redondeo{
+    border-radius: 20px;
+}
+
+.hero__image{
+    background-image: url("../image/bg1.jpg");
+    min-height: 60vh;
+    background-size: cover;
+    position: relative;
+}
+
+.hero__titulo{
+    color: $color_secundario;
+    font-weight: map-get($estilos, font-weight-1);
+}
+
+.hero__description{
+    font-weight: map-get($estilos, font-weight-2);
+    text-align: center;
+}
+
+.hero__image__color {
+    position: absolute;
+    background-image: linear-gradient(rgba(196, 196, 196, 0.863),rgba(255, 121, 183, 0.562));
+    height: 100%;
+    width: 100%;
+}
+
 $ancho: 100%;
 
 @media screen and (max-width:767px){
     .texto{
         text-align: center;
+    }
+    .hero__image{
+        min-height: 40vh;
     }
 }
 
@@ -167,19 +202,10 @@ $ancho: 100%;
 }
 
 /* Home */
-
-/* Home Services */
-.card{
-    border-radius: 10px;
-    border-color: $color_primario;
-}
-
-.card__image{
-    width: $ancho*0.7;
-}
-
-.card__texto{
-    text-align:center;
+/* Home categorias */
+.image__redondeo{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 /* Home video */
@@ -193,10 +219,15 @@ $ancho: 100%;
     color: $color_secundario;
     font-weight: bold;
 }
+
 .card__image2{
-    width: $ancho*0.7;
-    border-radius: 30px;
-}
+    width: 50%;
+    border-radius: 100%; }
+  
+.card__header{
+    margin-top: -35px;
+    height: 60px;
+    background-image: linear-gradient(40deg, $color_secundario_variante, $color_primario_variante);}
 
 /* Nosotros */
 .nos__image{
@@ -213,8 +244,20 @@ $ancho: 100%;
 }
 
 /* Testimonios */
-.tes__image{
-    width: $ancho*0.6;
+.card__background {
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: linear-gradient(40deg, $color_secundario_variante, $color_primario_variante);
+}
+  
+.card__profile {
+    width: 120px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 50%;
 }
 
 /* Formulario de contacto */
@@ -224,37 +267,10 @@ $ancho: 100%;
 
 .caja{    
     border-radius: 14px;
-    outline: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    transition: all 0.8s;
-    &:focus{
-        width: 340px;
-    }
 }
 
-@mixin caja__sizes($height, $width, $border) {
-    height: $height;
-    width: $width;
-    border: $border;
-} 
-
-.contacto__form{
-    display: grid;
-    grid-area: c-form;
-    text-align: center;
-    align-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    input{
-        @extend .caja;
-        @include caja__sizes(40px, 300px, none);
-
-    }
-    textarea{
-        @extend .caja;
-        @include caja__sizes(100px, 300px, 1px solid $color_blanco);
-    }
+.obligatorio{
+    color: $color_secundario;
 }
 
 /* Otros medios */
