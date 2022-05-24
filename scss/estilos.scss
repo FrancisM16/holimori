@@ -293,10 +293,12 @@ $ancho: 100%;
 .icono{
     color: $color_blanco;
     padding-bottom: 2%;
+    font-size: 18px;
 }
 
 .footer__brand{
-    padding-top: 2%;
+    width: 40px;
+    height: 40px;
 }
 
 @media screen and (max-width:767px){
@@ -308,5 +310,13 @@ $ancho: 100%;
     }
     .footer__copy{
         padding-top: 0%;
+    }
+    .icono{
+        font-size: 30px;
+    }
+    .footer__brand{
+        width: 70px;
+        height: 70px;
+        margin-top: 20%;
     }
 }

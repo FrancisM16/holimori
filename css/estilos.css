@@ -226,10 +226,12 @@ h3 {
 /* Pie de pagina */
 .icono {
   color: white;
-  padding-bottom: 2%; }
+  padding-bottom: 2%;
+  font-size: 18px; }
 
 .footer__brand {
-  padding-top: 2%; }
+  width: 40px;
+  height: 40px; }
 
 @media screen and (max-width: 767px) {
   .texto {
@@ -237,4 +239,10 @@ h3 {
   .hero__image, .hero__image1, .hero__image2, .hero__image3, .hero__image4 {
     min-height: 40vh; }
   .footer__copy {
-    padding-top: 0%; } }
+    padding-top: 0%; }
+  .icono {
+    font-size: 30px; }
+  .footer__brand {
+    width: 70px;
+    height: 70px;
+    margin-top: 20%; } }
