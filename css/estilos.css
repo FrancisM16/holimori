@@ -225,18 +225,16 @@ h3 {
 
 /* Pie de pagina */
 .icono {
-  width: 100%;
-  margin-bottom: 5px; }
-
-.footer__brand {
-  padding-top: 2%;
+  color: white;
   padding-bottom: 2%; }
 
-/* Responsive */
+.footer__brand {
+  padding-top: 2%; }
+
 @media screen and (max-width: 767px) {
   .texto {
     text-align: center; }
   .hero__image, .hero__image1, .hero__image2, .hero__image3, .hero__image4 {
     min-height: 40vh; }
-  .footer__brand {
-    padding-bottom: 0%; } }
+  .footer__copy {
+    padding-top: 0%; } }
