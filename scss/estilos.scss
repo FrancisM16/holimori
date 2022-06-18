@@ -4,7 +4,6 @@
 h1{
     font-weight: map-get($estilos, font-weight-1);
     color: $color_secundario;
-    text-transform: uppercase;
     font-size: map-get($estilos, font-size-1);
 }
 
@@ -57,11 +56,6 @@ h3{
 .hero__image4{
     background-image: url("../image/bg4.jpg");
     @extend .hero__image;
-}
-
-.hero__titulo{
-    color: $color_secundario;
-    font-weight: map-get($estilos, font-weight-1);
 }
 
 .hero__description{
